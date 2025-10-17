@@ -1,0 +1,140 @@
+{
+  "fecha_optimizacion": "2025-10-16T23:45:36.839041",
+  "target_info": {
+    "name": "IS_VULNERABLE",
+    "definition": "Vulnerable + Pobre (ingreso <= 1.5x línea de pobreza)",
+    "linea_pobreza": 515000,
+    "factor_vulnerabilidad": 1.5,
+    "limite_vulnerabilidad": 772500.0,
+    "class_balance_train": {
+      "0_no_vulnerable": 128809,
+      "1_vulnerable_pobre": 35880
+    },
+    "imbalance_ratio": 3.589994425863991
+  },
+  "dataset_info": {
+    "n_samples_total": 205862,
+    "n_samples_train": 164689,
+    "n_samples_test": 41173,
+    "n_features": 37,
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "optimizacion": {
+    "n_trials": 100,
+    "best_value": 0.9082944571678816,
+    "best_params": {
+      "n_estimators": 190,
+      "learning_rate": 0.1400128710829996,
+      "max_depth": 6,
+      "min_child_weight": 2,
+      "subsample": 0.9335526282623711,
+      "colsample_bytree": 0.6139605837397024,
+      "gamma": 0.3961761861547899,
+      "reg_alpha": 6.494314575540268,
+      "reg_lambda": 1.8338749752000996
+    },
+    "final_params": {
+      "n_estimators": 190,
+      "learning_rate": 0.1400128710829996,
+      "max_depth": 6,
+      "min_child_weight": 2,
+      "subsample": 0.9335526282623711,
+      "colsample_bytree": 0.6139605837397024,
+      "gamma": 0.3961761861547899,
+      "reg_alpha": 6.494314575540268,
+      "reg_lambda": 1.8338749752000996,
+      "scale_pos_weight": 3.589994425863991,
+      "random_state": 42,
+      "eval_metric": "logloss"
+    }
+  },
+  "metricas_finales": {
+    "test_roc_auc": 0.9091555967195423,
+    "test_precision": 0.5062574680837684,
+    "test_recall": 0.8974358974358975,
+    "test_f1": 0.6473402758232479
+  },
+  "top_features": [
+    {
+      "feature": "P6920",
+      "importance": 0.4663119912147522
+    },
+    {
+      "feature": "requirio_atencion_medica",
+      "importance": 0.1860266625881195
+    },
+    {
+      "feature": "P6250",
+      "importance": 0.061436619609594345
+    },
+    {
+      "feature": "P6430",
+      "importance": 0.05031895264983177
+    },
+    {
+      "feature": "P6100",
+      "importance": 0.045865580439567566
+    },
+    {
+      "feature": "P6240",
+      "importance": 0.04233585298061371
+    },
+    {
+      "feature": "P6585S1",
+      "importance": 0.0316050723195076
+    },
+    {
+      "feature": "P6110",
+      "importance": 0.030989285558462143
+    },
+    {
+      "feature": "P6160",
+      "importance": 0.012281244620680809
+    },
+    {
+      "feature": "nivel_gasto_salud",
+      "importance": 0.011378669179975986
+    },
+    {
+      "feature": "P6585S2",
+      "importance": 0.007939239032566547
+    },
+    {
+      "feature": "P5020",
+      "importance": 0.0041461605578660965
+    },
+    {
+      "feature": "DPTO",
+      "importance": 0.003827472683042288
+    },
+    {
+      "feature": "es_formal",
+      "importance": 0.003800012404099107
+    },
+    {
+      "feature": "P6050",
+      "importance": 0.0035993424244225025
+    },
+    {
+      "feature": "P5090",
+      "importance": 0.0033435688819736242
+    },
+    {
+      "feature": "edad_grupo",
+      "importance": 0.003301553428173065
+    },
+    {
+      "feature": "P6090",
+      "importance": 0.003039697417989373
+    },
+    {
+      "feature": "P6040",
+      "importance": 0.00297296023927629
+    },
+    {
+      "feature": "P6080",
+      "importance": 0.002949134912341833
+    }
+  ]
+}

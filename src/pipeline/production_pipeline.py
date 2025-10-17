@@ -38,19 +38,14 @@ class VulnerabilityPipeline:
         """
         # Cargar modelo
         if model_path is None:
-            model_path = 'models/final_optimized_xgboost.pkl'
+            model_path = 'data/processed/modeling_v2/results/final_optimized_xgboost_v2.pkl'
         
         self.model = joblib.load(model_path)
         
         # Cargar umbral optimizado
         if threshold is None:
-            threshold_file = Path('models/threshold_optimization.json')
-            if threshold_file.exists():
-                with open(threshold_file, 'r') as f:
-                    threshold_data = json.load(f)
-                    self.threshold = threshold_data['optimal_threshold']
-            else:
-                self.threshold = 0.5  # Default
+            # Usar el umbral optimizado del modelo v2
+            self.threshold = 0.49
         else:
             self.threshold = threshold
         
@@ -66,7 +61,7 @@ class VulnerabilityPipeline:
             'log_gasto_salud'
         ]
         
-        print(f"✓ Pipeline inicializado")
+        print(f"[OK] Pipeline inicializado")
         print(f"  Modelo: {model_path}")
         print(f"  Umbral: {self.threshold:.4f}")
         print(f"  Features requeridas: {len(self.feature_order)}")

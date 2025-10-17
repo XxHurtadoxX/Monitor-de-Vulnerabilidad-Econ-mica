@@ -52,9 +52,9 @@ app.add_middleware(
 # Inicializar pipeline global
 try:
     pipeline = VulnerabilityPipeline()
-    print("✓ Pipeline cargado exitosamente")
+    print("[OK] Pipeline cargado exitosamente")
 except Exception as e:
-    print(f"❌ Error cargando pipeline: {e}")
+    print(f"[ERROR] Error cargando pipeline: {e}")
     pipeline = None
 
 # ======================

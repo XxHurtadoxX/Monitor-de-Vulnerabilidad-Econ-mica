@@ -1,0 +1,26 @@
+{
+  "fecha_analisis": "2025-10-16T23:30:38.913303",
+  "linea_pobreza_2024": 515000,
+  "factor_vulnerabilidad": 1.5,
+  "limite_vulnerabilidad": 772500.0,
+  "total_registros_validos": 205862,
+  "target_actual": {
+    "clase_0_count": 190612,
+    "clase_1_count": 15250,
+    "clase_0_pct": 92.59212482148236,
+    "clase_1_pct": 7.4078751785176475,
+    "imbalance_ratio": 12.499147540983607
+  },
+  "target_nuevo": {
+    "clase_0_count": 161012,
+    "clase_1_count": 44850,
+    "clase_0_pct": 78.21356054055629,
+    "clase_1_pct": 21.786439459443706,
+    "imbalance_ratio": 3.590011148272018
+  },
+  "cambio": {
+    "registros_clase_1_adicionales": 29600,
+    "puntos_porcentuales_adicionales": 14.378564280926058,
+    "mejora_balanceo": 3.4816458848602263
+  }
+}
