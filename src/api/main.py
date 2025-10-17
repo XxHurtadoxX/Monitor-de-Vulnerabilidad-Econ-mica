@@ -35,14 +35,14 @@ app = FastAPI(
 )
 
 # Configurar CORS para frontend React
-# IMPORTANTE: Después del despliegue, actualiza con tu URL específica de Netlify
+# URLs permitidas para acceder a la API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:3001",
         "http://127.0.0.1:3000",
-        "https://moneave.netlify.app/",  # Temporal - actualizar con URL específica
+        "https://moneave.netlify.app",  # Frontend en producción - SIN barra final
     ],
     allow_credentials=True,
     allow_methods=["*"],
