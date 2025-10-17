@@ -1,0 +1,261 @@
+{
+  "titulo": "Evaluación de Vulnerabilidad Económica",
+  "descripcion": "Cuestionario para determinar el nivel de vulnerabilidad económica",
+  "secciones": [
+    {
+      "id": "demograficas",
+      "titulo": "Información Demográfica",
+      "preguntas": [
+        {
+          "id": "edad",
+          "texto": "¿Cuál es su edad?",
+          "tipo": "number",
+          "requerido": true,
+          "validacion": {"min": 15, "max": 100},
+          "ayuda": "Edad en años completos"
+        },
+        {
+          "id": "sexo",
+          "texto": "¿Cuál es su sexo?",
+          "tipo": "select",
+          "requerido": true,
+          "opciones": [
+            {"valor": "hombre", "etiqueta": "Hombre"},
+            {"valor": "mujer", "etiqueta": "Mujer"}
+          ]
+        },
+        {
+          "id": "departamento",
+          "texto": "¿En qué departamento vive?",
+          "tipo": "select",
+          "requerido": true,
+          "opciones": [
+            {"valor": 5, "etiqueta": "Antioquia"},
+            {"valor": 8, "etiqueta": "Atlántico"},
+            {"valor": 11, "etiqueta": "Bogotá D.C."},
+            {"valor": 13, "etiqueta": "Bolívar"},
+            {"valor": 15, "etiqueta": "Boyacá"},
+            {"valor": 17, "etiqueta": "Caldas"},
+            {"valor": 19, "etiqueta": "Cauca"},
+            {"valor": 23, "etiqueta": "Córdoba"},
+            {"valor": 25, "etiqueta": "Cundinamarca"},
+            {"valor": 27, "etiqueta": "Chocó"},
+            {"valor": 41, "etiqueta": "Huila"},
+            {"valor": 44, "etiqueta": "La Guajira"},
+            {"valor": 47, "etiqueta": "Magdalena"},
+            {"valor": 50, "etiqueta": "Meta"},
+            {"valor": 52, "etiqueta": "Nariño"},
+            {"valor": 54, "etiqueta": "Norte de Santander"},
+            {"valor": 63, "etiqueta": "Quindío"},
+            {"valor": 66, "etiqueta": "Risaralda"},
+            {"valor": 68, "etiqueta": "Santander"},
+            {"valor": 70, "etiqueta": "Sucre"},
+            {"valor": 73, "etiqueta": "Tolima"},
+            {"valor": 76, "etiqueta": "Valle del Cauca"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "educacion",
+      "titulo": "Educación",
+      "preguntas": [
+        {
+          "id": "nivel_educativo",
+          "texto": "¿Cuál es su nivel educativo más alto alcanzado?",
+          "tipo": "select",
+          "requerido": true,
+          "opciones": [
+            {"valor": "ninguno", "etiqueta": "Ninguno"},
+            {"valor": "primaria", "etiqueta": "Primaria"},
+            {"valor": "secundaria", "etiqueta": "Secundaria"},
+            {"valor": "media", "etiqueta": "Media"},
+            {"valor": "superior", "etiqueta": "Superior"}
+          ]
+        },
+        {
+          "id": "años_educacion",
+          "texto": "¿Cuántos años de educación formal ha completado?",
+          "tipo": "number",
+          "requerido": true,
+          "validacion": {"min": 0, "max": 25},
+          "ayuda": "Total de años de estudio formal"
+        }
+      ]
+    },
+    {
+      "id": "salud",
+      "titulo": "Salud y Seguridad Social",
+      "preguntas": [
+        {
+          "id": "tiene_salud",
+          "texto": "¿Está afiliado a algún sistema de salud?",
+          "tipo": "boolean",
+          "requerido": true
+        },
+        {
+          "id": "tipo_salud",
+          "texto": "¿Qué tipo de afiliación tiene?",
+          "tipo": "select",
+          "requerido": true,
+          "opciones": [
+            {"valor": "contributivo", "etiqueta": "Contributivo (EPS)"},
+            {"valor": "subsidiado", "etiqueta": "Subsidiado (SISBEN)"},
+            {"valor": "especial", "etiqueta": "Especial"},
+            {"valor": "ninguno", "etiqueta": "No afiliado"}
+          ],
+          "dependeDe": {"campo": "tiene_salud", "valor": true}
+        },
+        {
+          "id": "requirio_atencion_medica",
+          "texto": "¿Ha requerido atención médica en los últimos 30 días?",
+          "tipo": "boolean",
+          "requerido": true
+        },
+        {
+          "id": "gasto_salud_ultimos_30_dias",
+          "texto": "¿Cuánto gastó en salud en los últimos 30 días? (en pesos)",
+          "tipo": "number",
+          "requerido": false,
+          "validacion": {"min": 0, "max": 10000000},
+          "dependeDe": {"campo": "requirio_atencion_medica", "valor": true},
+          "ayuda": "Incluya consultas, medicamentos, exámenes, etc."
+        }
+      ]
+    },
+    {
+      "id": "trabajo",
+      "titulo": "Situación Laboral",
+      "preguntas": [
+        {
+          "id": "empleo_formal",
+          "texto": "¿Tiene un empleo formal con contrato y prestaciones sociales?",
+          "tipo": "boolean",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "vivienda",
+      "titulo": "Vivienda",
+      "preguntas": [
+        {
+          "id": "tipo_vivienda",
+          "texto": "¿Qué tipo de vivienda habita?",
+          "tipo": "select",
+          "requerido": true,
+          "opciones": [
+            {"valor": "casa", "etiqueta": "Casa"},
+            {"valor": "apartamento", "etiqueta": "Apartamento"},
+            {"valor": "cuarto", "etiqueta": "Cuarto"},
+            {"valor": "otro", "etiqueta": "Otro"}
+          ]
+        },
+        {
+          "id": "tenencia_vivienda",
+          "texto": "¿La vivienda es...?",
+          "tipo": "select",
+          "requerido": true,
+          "opciones": [
+            {"valor": "propia", "etiqueta": "Propia (pagada o pagando)"},
+            {"valor": "arriendo", "etiqueta": "En arriendo"},
+            {"valor": "prestada", "etiqueta": "Prestada o cedida"},
+            {"valor": "otra", "etiqueta": "Otra situación"}
+          ]
+        },
+        {
+          "id": "num_cuartos",
+          "texto": "¿Cuántos cuartos tiene la vivienda? (sin contar baños y cocina)",
+          "tipo": "number",
+          "requerido": true,
+          "validacion": {"min": 1, "max": 20}
+        },
+        {
+          "id": "num_personas_hogar",
+          "texto": "¿Cuántas personas viven en su hogar?",
+          "tipo": "number",
+          "requerido": true,
+          "validacion": {"min": 1, "max": 20}
+        },
+        {
+          "id": "material_pisos",
+          "texto": "¿Cuál es el material predominante de los pisos?",
+          "tipo": "select",
+          "requerido": true,
+          "opciones": [
+            {"valor": "cemento", "etiqueta": "Cemento / Gravilla"},
+            {"valor": "baldosa", "etiqueta": "Baldosa / Cerámica"},
+            {"valor": "madera", "etiqueta": "Madera pulida"},
+            {"valor": "tierra", "etiqueta": "Tierra / Arena"},
+            {"valor": "otro", "etiqueta": "Otro material"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "servicios",
+      "titulo": "Servicios Públicos",
+      "preguntas": [
+        {
+          "id": "tiene_acueducto",
+          "texto": "¿La vivienda tiene servicio de acueducto?",
+          "tipo": "boolean",
+          "requerido": true
+        },
+        {
+          "id": "tiene_alcantarillado",
+          "texto": "¿La vivienda tiene servicio de alcantarillado?",
+          "tipo": "boolean",
+          "requerido": true
+        },
+        {
+          "id": "tiene_gas",
+          "texto": "¿La vivienda tiene servicio de gas natural o por tubería?",
+          "tipo": "boolean",
+          "requerido": true
+        },
+        {
+          "id": "tiene_energia",
+          "texto": "¿La vivienda tiene servicio de energía eléctrica?",
+          "tipo": "boolean",
+          "requerido": true
+        },
+        {
+          "id": "gasto_energia_mensual",
+          "texto": "¿Cuánto paga mensualmente por energía eléctrica? (en pesos)",
+          "tipo": "number",
+          "requerido": false,
+          "validacion": {"min": 0, "max": 2000000},
+          "dependeDe": {"campo": "tiene_energia", "valor": true}
+        },
+        {
+          "id": "tiene_recoleccion_basuras",
+          "texto": "¿La vivienda tiene servicio de recolección de basuras?",
+          "tipo": "boolean",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "hogar",
+      "titulo": "Composición del Hogar",
+      "preguntas": [
+        {
+          "id": "tiene_hijos_menores",
+          "texto": "¿Tiene hijos menores de 18 años?",
+          "tipo": "boolean",
+          "requerido": true
+        },
+        {
+          "id": "num_menores_hogar",
+          "texto": "¿Cuántos menores de 18 años viven en su hogar?",
+          "tipo": "number",
+          "requerido": false,
+          "validacion": {"min": 0, "max": 10},
+          "dependeDe": {"campo": "tiene_hijos_menores", "valor": true}
+        }
+      ]
+    }
+  ]
+}
+

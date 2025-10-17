@@ -1,0 +1,30 @@
+{
+  "optimal_threshold": 0.5263469815254211,
+  "metrics_with_optimal_threshold": {
+    "precision": 0.1549359372354236,
+    "recall": 0.9,
+    "f1_score": 0.26436172774112776,
+    "n_predicted_positive": 17717
+  },
+  "metrics_with_default_threshold": {
+    "threshold": 0.5,
+    "precision": 0.15266136932622185,
+    "recall": 0.919672131147541,
+    "f1_score": 0.26185586258401794
+  },
+  "confusion_matrix": {
+    "true_negatives": 23151,
+    "false_positives": 14972,
+    "false_negatives": 305,
+    "true_positives": 2745
+  },
+  "improvement": {
+    "precision_improvement_percent": 1.4899433427334463,
+    "recall_change_percent": -2.1390374331550777,
+    "f1_improvement_percent": 0.9569635494816486
+  },
+  "constraint": {
+    "min_recall_required": 0.9,
+    "achieved_recall": 0.9
+  }
+}

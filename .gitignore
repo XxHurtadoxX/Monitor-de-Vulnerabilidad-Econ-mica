@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files (large raw data)
+data/raw/*.zip
+data/processed/geih_*.csv
+data/processed/geih_*.dta
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# IMPORTANTE: NO ignorar los modelos finales necesarios para producción
+# models/final_optimized_xgboost.pkl debe estar incluido
+# data/processed/modeling/feature_names.txt debe estar incluido
+# models/threshold_optimization.json debe estar incluido
+
+# API keys and secrets
+.env
+.env.local
+.env.production
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Testing
+.pytest_cache/
+.tox/

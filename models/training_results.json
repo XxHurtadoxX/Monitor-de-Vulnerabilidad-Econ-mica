@@ -1,0 +1,140 @@
+{
+  "best_model": "XGBoost",
+  "best_model_file": "best_base_model_xgboost.pkl",
+  "cv_results": {
+    "Logistic Regression": {
+      "cv_mean": 0.7810781934114237,
+      "cv_std": 0.004025440183608482,
+      "cv_scores": [
+        0.7758439481116203,
+        0.7872114900842733,
+        0.7783703164088158,
+        0.7838584618287251,
+        0.7801067506236841
+      ]
+    },
+    "Random Forest": {
+      "cv_mean": 0.8023934671056034,
+      "cv_std": 0.003781422250419877,
+      "cv_scores": [
+        0.7982336721354478,
+        0.807228423470929,
+        0.7977943124999328,
+        0.8053464201898753,
+        0.803364507231832
+      ]
+    },
+    "Gradient Boosting": {
+      "cv_mean": 0.8074172159806233,
+      "cv_std": 0.0034148554629802627,
+      "cv_scores": [
+        0.805679974714816,
+        0.8103987872357122,
+        0.8050239118071703,
+        0.812464422552836,
+        0.8035189835925813
+      ]
+    },
+    "XGBoost": {
+      "cv_mean": 0.8073744953616652,
+      "cv_std": 0.0037739087275682555,
+      "cv_scores": [
+        0.8052554910883702,
+        0.8119924485776546,
+        0.8039037429490135,
+        0.8119148971338083,
+        0.8038058970594796
+      ]
+    }
+  },
+  "test_results": {
+    "Logistic Regression": {
+      "roc_auc": 0.7761450490496034,
+      "f1_score": 0.24705521741034286,
+      "precision": 0.1425683529590135,
+      "recall": 0.9249180327868852,
+      "accuracy": 0.5823719427780342,
+      "training_time": 99.92528128623962
+    },
+    "Random Forest": {
+      "roc_auc": 0.8038431169514724,
+      "f1_score": 0.262447976733691,
+      "precision": 0.15491623749482034,
+      "recall": 0.8580327868852459,
+      "accuracy": 0.6427513176110558,
+      "training_time": 25.291594982147217
+    },
+    "Gradient Boosting": {
+      "roc_auc": 0.8100259255739511,
+      "f1_score": 0.0006550933508024893,
+      "precision": 0.3333333333333333,
+      "recall": 0.0003278688524590164,
+      "accuracy": 0.9258980399776553,
+      "training_time": 68.46433854103088
+    },
+    "XGBoost": {
+      "roc_auc": 0.8100312362529741,
+      "f1_score": 0.2627203192550715,
+      "precision": 0.1536196455358631,
+      "recall": 0.9065573770491804,
+      "accuracy": 0.6230782308794598,
+      "training_time": 4.362256765365601
+    }
+  },
+  "comparison_table": {
+    "cv_roc_auc": {
+      "XGBoost": 0.8073744953616652,
+      "Gradient Boosting": 0.8074172159806233,
+      "Random Forest": 0.8023934671056034,
+      "Logistic Regression": 0.7810781934114237
+    },
+    "cv_std": {
+      "XGBoost": 0.0037739087275682555,
+      "Gradient Boosting": 0.0034148554629802627,
+      "Random Forest": 0.003781422250419877,
+      "Logistic Regression": 0.004025440183608482
+    },
+    "roc_auc": {
+      "XGBoost": 0.8100312362529741,
+      "Gradient Boosting": 0.8100259255739511,
+      "Random Forest": 0.8038431169514724,
+      "Logistic Regression": 0.7761450490496034
+    },
+    "f1_score": {
+      "XGBoost": 0.2627203192550715,
+      "Gradient Boosting": 0.0006550933508024893,
+      "Random Forest": 0.262447976733691,
+      "Logistic Regression": 0.24705521741034286
+    },
+    "recall": {
+      "XGBoost": 0.9065573770491804,
+      "Gradient Boosting": 0.0003278688524590164,
+      "Random Forest": 0.8580327868852459,
+      "Logistic Regression": 0.9249180327868852
+    },
+    "precision": {
+      "XGBoost": 0.1536196455358631,
+      "Gradient Boosting": 0.3333333333333333,
+      "Random Forest": 0.15491623749482034,
+      "Logistic Regression": 0.1425683529590135
+    },
+    "accuracy": {
+      "XGBoost": 0.6230782308794598,
+      "Gradient Boosting": 0.9258980399776553,
+      "Random Forest": 0.6427513176110558,
+      "Logistic Regression": 0.5823719427780342
+    },
+    "training_time": {
+      "XGBoost": 4.362256765365601,
+      "Gradient Boosting": 68.46433854103088,
+      "Random Forest": 25.291594982147217,
+      "Logistic Regression": 99.92528128623962
+    }
+  },
+  "training_info": {
+    "n_train": 164689,
+    "n_test": 41173,
+    "n_features": 37,
+    "imbalance_ratio": 12.499147540983607
+  }
+}

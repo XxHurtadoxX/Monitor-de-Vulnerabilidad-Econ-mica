@@ -1,0 +1,118 @@
+{
+  "dataset_info": {
+    "n_samples_total": 205862,
+    "n_samples_train": 164689,
+    "n_samples_test": 41173,
+    "n_features": 37,
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "target_info": {
+    "name": "IS_VULNERABLE",
+    "linea_pobreza": 515000,
+    "factor_vulnerabilidad": 1.5,
+    "class_balance_train": {
+      "0_no_vulnerable": 152489,
+      "1_vulnerable": 12200
+    },
+    "imbalance_ratio": 12.499147540983607
+  },
+  "features": {
+    "all_features": [
+      "P6040",
+      "P6110",
+      "P5020",
+      "P6585S2",
+      "P6016",
+      "P6585S3",
+      "P6080",
+      "P6050",
+      "P6090",
+      "P6430",
+      "P6920",
+      "P5000",
+      "DPTO",
+      "P5080",
+      "P5040",
+      "AREA",
+      "P5090",
+      "P6250",
+      "P6240",
+      "P5030",
+      "P6585S1",
+      "P6160",
+      "P6100",
+      "P6170",
+      "P5070",
+      "P5010",
+      "edad_grupo",
+      "hacinamiento_cat",
+      "servicios_score",
+      "es_formal",
+      "tiene_energia",
+      "nivel_gasto_energia",
+      "tiene_recoleccion",
+      "estado_recoleccion",
+      "requirio_atencion_medica",
+      "nivel_gasto_salud",
+      "log_gasto_salud"
+    ],
+    "n_originales": 26,
+    "n_engineered": 11,
+    "features_originales_mantenidas": [
+      "P6040",
+      "P6110",
+      "P5020",
+      "P6585S2",
+      "P6016",
+      "P6585S3",
+      "P6080",
+      "P6050",
+      "P6090",
+      "P6430",
+      "P6920",
+      "P5000",
+      "DPTO",
+      "P5080",
+      "P5040",
+      "AREA",
+      "P5090",
+      "P6250",
+      "P6240",
+      "P5030",
+      "P6585S1",
+      "P6160",
+      "P6100",
+      "P6170",
+      "P5070",
+      "P5010"
+    ],
+    "features_engineered": [
+      "edad_grupo",
+      "hacinamiento_cat",
+      "servicios_score",
+      "es_formal",
+      "tiene_energia",
+      "nivel_gasto_energia",
+      "tiene_recoleccion",
+      "estado_recoleccion",
+      "requirio_atencion_medica",
+      "nivel_gasto_salud",
+      "log_gasto_salud"
+    ],
+    "features_eliminadas_constantes": [
+      "CLASE",
+      "FT"
+    ],
+    "features_transformadas_hibridas": [
+      "P5100",
+      "P5110",
+      "P6120"
+    ]
+  },
+  "transformaciones_especiales": {
+    "P5100_energia": "Transformada a: tiene_energia, nivel_gasto_energia",
+    "P5110_recoleccion": "Transformada a: tiene_recoleccion, estado_recoleccion",
+    "P6120_salud": "Transformada a: requirio_atencion_medica, nivel_gasto_salud, log_gasto_salud"
+  }
+}
