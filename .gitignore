@@ -29,15 +29,20 @@ ENV/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+notebooks/
 
-# Data files (large raw data)
-data/raw/*.zip
+# Data files (large raw data) - NO SUBIR DATOS CRUDOS
+data/raw/
 data/processed/geih_*.csv
 data/processed/geih_*.dta
+data/processed/*.csv
+data/processed/*.dta
+docs/
 
-# IDE
+# IDE y Cursor
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 
@@ -49,10 +54,19 @@ Thumbs.db
 *.log
 logs/
 
+# Tests
+tests/
+
 # IMPORTANTE: NO ignorar los modelos finales necesarios para producción
 # models/final_optimized_xgboost.pkl debe estar incluido
 # data/processed/modeling/feature_names.txt debe estar incluido
 # models/threshold_optimization.json debe estar incluido
+# src/pipeline/questionnaire_schema.json debe estar incluido
+
+# Frontend (se despliega por separado en Netlify)
+frontend/node_modules/
+frontend/build/
+frontend/.env
 
 # API keys and secrets
 .env
@@ -68,3 +82,7 @@ coverage.xml
 # Testing
 .pytest_cache/
 .tox/
+
+# Guías de despliegue (opcionales, puedes comentar si quieres subirlas)
+BACKEND_DEPLOY_GUIDE.md
+DEPLOY_BACKEND_NOW.md
